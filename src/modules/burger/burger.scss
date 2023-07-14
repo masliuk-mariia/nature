@@ -1,0 +1,94 @@
+/*-----Burger-----*/
+body._lock{
+  overflow: hidden;
+}
+
+@media(max-width: $maxWidthSwitchBurger){
+.header{
+  .menu__icon{
+    z-index: 10;
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 35px;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+  }
+  .menu__icon span,
+  .menu__icon::before,
+  .menu__icon::after{
+    left: 0;
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    transition: all 0.3s ease 0s;
+    background-color: $burgerTextColor;
+  }
+  .menu__icon._active span,
+  .menu__icon._active::before,
+  .menu__icon._active::after{
+    background-color: $burgerTextColor;
+  }
+  .menu__icon::before{
+    content: '';
+    top: 0;
+  }
+  .menu__icon::after{
+    content: '';
+    bottom: 0;
+  }
+  .menu__icon span{
+    top: 50%;
+    transform: scale(1) translate(0px, -50%);
+  }
+  .menu__icon._active span{
+    transform: scale(0) translate(0px, -50%);
+  }
+  .menu__icon._active::before{
+    top: 50%;
+    transform: rotate(-45deg) translate(0px, -50%);
+  }
+  .menu__icon._active::after{
+    bottom: 50%;
+    transform: rotate(45deg) translate(0px, 50%);
+  }
+
+//menu items
+
+  .menu__body{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 46px;
+    left: 0;
+    background-color: $burgerBgColor;
+    padding: 20px 0 20px 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+    &._active{
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  .menu__list{
+    display: block;
+    margin-top: 30px;
+    li{
+      display: block;
+      padding: 0 0 25px 0;
+      text-align: center;
+      &:last-child{
+        padding: 0;
+      }
+    }
+  }
+  .menu__link{
+    color: $burgerTextColor;
+    font-size: 24px;
+  }
+
+
+}
+}

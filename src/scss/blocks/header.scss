@@ -1,0 +1,109 @@
+.header {
+  @media(max-width: $maxWidthSwitchBurger){
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 10;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 72px 5px 32px 5px;
+    @media(max-width: 1100px){
+      padding: 15px;
+    }
+  }
+
+  &__logo img{
+    width: 180px;
+    height: auto;
+    @media(max-width: 1100px){
+      width: 100px;
+      height: auto;
+    }
+  }
+
+  &__menu {
+  }
+.menu {
+
+  &__icon {
+  }
+
+  &__body {
+  }
+
+  &__list {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    & > *:not(:last-child){
+      margin: 0 36px 0 0;
+      @media(max-width: 1200px){
+        margin: 0 15px 0 0;
+      }
+    }
+    @media(max-width: $maxWidthSwitchBurger){
+      display: block;
+    }
+  }
+
+  &__link {
+    color: rgba(0, 0, 0, 0.76);
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    @media(max-width: 1100px){
+      font-size: 16px;  
+    }
+    &_active {
+      color: $mainColor;
+    }
+    &_btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+    
+      // line-height: 45px;
+      text-align: center;
+
+      padding: 10px 40px;
+      min-height: 58px;
+      border-radius: 50px;
+      background-color: $mainColor;
+      transition: background-color 0.3s ease 0s;
+      &:hover{
+        background-color: darken($mainColor, 10%);
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, .3);
+      }
+      @media(max-width: 1100px){
+        min-height: 45px;
+        font-size: 16px;  
+        padding: 5px 20px;
+      }
+      @media(max-width: $maxWidthSwitchBurger){
+        display: inline-block;
+        line-height: 45px;
+        margin: 0 auto;
+        text-align: center;
+        color: #fff;
+      }
+    
+    }
+  }
+}
+}
+
+
+
+.icon-menu {
+}

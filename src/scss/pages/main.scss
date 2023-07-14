@@ -1,0 +1,125 @@
+.main {
+
+  &__container {
+    padding: 70px 0 169px 0;
+    display: flex;
+    align-items: flex-end;
+    @media(max-width: 1730px){
+      padding: 70px 5px 169px 5px;
+
+    }
+    @media(max-width: 1100px){
+      flex-direction: column-reverse;
+      text-align: center;
+      padding: 70px 15px;
+    }
+    @media(max-width: 474px){
+      padding: 70px 5px 5px 5px;
+    }
+  }
+
+  &__content {
+    margin: 0 84px;
+    @media(max-width: 1100px){
+      margin: 0 0 35px 0;
+    }
+  }
+
+  &__title {
+    color: #091F3F;
+    font-size: 68px;
+    font-weight: 700;
+    line-height: calc(96/68*100%);
+    letter-spacing: -1.71px;
+    margin: 0 0 33px 0;
+    @media(max-width: 1000px){
+      margin: 5px 0 0 0;
+      font-size: 50px;
+    }
+    @media(max-width: 474px){
+      font-size: 25px;
+    }
+    img{
+      max-width: 327px;
+      @media(max-width: 474px){
+        max-width: 100px;
+      }
+    }
+  }
+
+  &__text {
+    color: #898989;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    margin: 0 0 37px 0;
+  }
+
+  &__btn {
+      display: inline-block;
+      color: #fff;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: -0.6px;
+      padding: 5px 70px;
+      min-height: 72px;
+      line-height: 72px;
+      // width: 261px;
+      border-radius: 50px;
+      background-color: $mainColor;
+      transition: background-color 0.3s ease 0s;
+      &:hover{
+        background-color: darken($mainColor, 10%);
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, .3);
+      }
+  }
+
+  &__photo {
+    max-width: 629px;
+    flex-grow: 0;
+    display: flex;
+    align-items: flex-end;
+    @media(max-width: 1100px){
+      margin: 0 auto;
+      padding: 0 5px;
+    }
+    img{
+      border: 9px solid #F8F8F8;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      border-radius: 45%;
+
+      @media(max-width: 1000px){
+        max-width: 100%;
+        max-height: auto;
+      }
+      @media(max-width: 480px){
+        border: 4px solid #F8F8F8;
+        box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);      
+      }
+    }
+    &_left {
+      img{
+        max-width: 451px;
+        max-height: 621px;
+        @media(max-width: 1000px){
+          max-width: 100%;
+          max-height: auto;
+        }
+      }
+    }
+    &_right {
+      box-sizing: content-box;
+      margin-left: -25%;
+      img{
+        max-width: 356px;
+        max-height: 490px;
+        @media(max-width: 1000px){
+          max-width: 100%;
+          max-height: auto;
+        }
+      }
+    }
+  }
+}
+

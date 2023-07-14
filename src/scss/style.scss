@@ -1,0 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700,700italic&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Inter:300,regular&display=swap);
+// 600 400 500 700 700italic
+@import "./_clean.scss";
+@import "./_variables.scss";
+@import "./_base.scss";
+
+@import "../modules/burger/burger.scss";
+@import "./blocks/header.scss";
+
+@import "./pages/main.scss";
+@import "./pages/book.scss";
+
+@import "./blocks/footer.scss";

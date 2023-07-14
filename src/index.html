@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include("html/blocks/head.html",{
+    "title": "Nature"
+  })
+  <body>
+
+    <div class="_wrapper">
+
+      @@include("html/blocks/header.html", {})
+        <main>
+          @@include("html/pages/main.html", {})
+          @@include("html/pages/book.html", {})
+        </main>
+      @@include("html/blocks/footer.html", {})
+    </div>
+
+
+    @@include("html/blocks/script.html", {})
+    
+  </body>
+</html>
