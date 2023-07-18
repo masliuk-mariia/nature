@@ -599,7 +599,7 @@ body._lock {
 }
 @media (max-width: 768px) {
   .discover__item {
-    min-height: 320px;
+    height: 320px;
   }
 }
 .discover__item_1 {
@@ -625,11 +625,21 @@ body._lock {
 .discover__text {
   padding: 58px 47px;
 }
+@media (max-width: 768px) {
+  .discover__text {
+    padding: 20px;
+  }
+}
 .discover__title {
   color: #FFF;
   font-size: 42px;
   font-weight: 600;
   letter-spacing: -1.05px;
+}
+@media (max-width: 768px) {
+  .discover__title {
+    font-size: 35px;
+  }
 }
 
 .things__header {
@@ -690,6 +700,9 @@ body._lock {
 .footer {
   padding: 107px 0 284px 0;
   color: #000;
+}
+.footer a {
+  color: inherit;
 }
 @media (max-width: 767px) {
   .footer {

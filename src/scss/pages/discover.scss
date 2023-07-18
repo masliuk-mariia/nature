@@ -40,7 +40,7 @@
     background-color: red;
     border-radius: 20px;
     @media(max-width: 768px){
-      min-height: 320px;
+      height: 320px;
     }
     &_1 {
       background-color: #BC1A6E;
@@ -68,6 +68,9 @@
 
   &__text {
     padding: 58px 47px;
+    @media(max-width: 768px){
+      padding: 20px;
+    }
   }
 
   &__title {
@@ -75,6 +78,9 @@
     font-size: 42px;
     font-weight: 600;
     letter-spacing: -1.05px;
+    @media(max-width: 768px){
+      font-size: 35px;
+    }
   }
 }
 
