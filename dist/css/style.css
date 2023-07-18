@@ -131,6 +131,11 @@ body {
   letter-spacing: -1.2px;
   text-align: center;
 }
+@media (max-width: 768px) {
+  .content-header__title {
+    font-size: 35px;
+  }
+}
 
 /*-----Burger-----*/
 body._lock {
@@ -557,6 +562,11 @@ body._lock {
 .discover__header {
   margin: 0 0 59px 0;
 }
+@media (max-width: 768px) {
+  .discover__header {
+    margin: 0 0 20px 0;
+  }
+}
 .discover__container {
   max-width: 1280px;
   padding: 55px 0 149px 0;
@@ -645,6 +655,11 @@ body._lock {
 .things__header {
   margin: 0 0 59px 0;
 }
+@media (max-width: 768px) {
+  .things__header {
+    margin: 0 0 20px 0;
+  }
+}
 .things__container {
   max-width: 1280px;
   padding: 55px 0 149px 0;
@@ -678,6 +693,11 @@ body._lock {
   position: relative;
   border-radius: 20px;
 }
+@media (max-width: 768px) {
+  .things__item {
+    height: 450px;
+  }
+}
 .things__title {
   position: absolute;
   bottom: 60px;
@@ -687,6 +707,11 @@ body._lock {
   font-size: 42px;
   font-weight: 600;
   letter-spacing: -1.05px;
+}
+@media (max-width: 425px) {
+  .things__title {
+    font-size: 35px;
+  }
 }
 .things__bg {
   height: 100%;
@@ -701,7 +726,7 @@ body._lock {
   padding: 107px 0 284px 0;
   color: #000;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .footer {
     padding: 70px 0;
   }
@@ -712,6 +737,11 @@ body._lock {
 .footer__content {
   padding: 0 0 116px 0;
   border-bottom: 1px solid rgba(170, 170, 170, 0.8);
+}
+@media (max-width: 768px) {
+  .footer__content {
+    padding: 0 0 70px 0;
+  }
 }
 .footer__row {
   display: flex;

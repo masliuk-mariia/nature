@@ -1,7 +1,7 @@
 .footer {
   padding: 107px 0 284px 0;
   color: #000;
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     padding: 70px 0;
   }
   a{
@@ -10,6 +10,9 @@
   &__content {
     padding: 0 0 116px 0;
     border-bottom: 1px solid rgba(170, 170, 170, 0.80);
+    @media (max-width: 768px) {
+      padding: 0 0 70px 0;
+    }
   }
 
   &__row {

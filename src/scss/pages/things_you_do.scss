@@ -1,6 +1,10 @@
 .things {
   &__header {
     margin: 0 0 59px 0;
+    @media(max-width: 768px){
+      margin: 0 0 20px 0;
+    }
+
   }
 
   &__container {
@@ -32,6 +36,9 @@
     height: 637px;
     position: relative;
     border-radius: 20px;
+    @media(max-width: 768px){
+      height: 450px;
+    }
   }
 
   &__title {
@@ -44,6 +51,9 @@
     font-size: 42px;
     font-weight: 600;
     letter-spacing: -1.05px;
+    @media(max-width: 425px){
+      font-size: 35px;
+    }
   }
 
   &__bg {
