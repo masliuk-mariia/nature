@@ -701,13 +701,13 @@ body._lock {
   padding: 107px 0 284px 0;
   color: #000;
 }
-.footer a {
-  color: inherit;
-}
 @media (max-width: 767px) {
   .footer {
     padding: 70px 0;
   }
+}
+.footer a {
+  color: #000;
 }
 .footer__content {
   padding: 0 0 116px 0;

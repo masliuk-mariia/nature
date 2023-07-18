@@ -1,13 +1,12 @@
 .footer {
-  a{
-    color: inherit;
-  }
   padding: 107px 0 284px 0;
   color: #000;
   @media (max-width: 767px) {
     padding: 70px 0;
   }
-
+  a{
+    color: #000;
+  }
   &__content {
     padding: 0 0 116px 0;
     border-bottom: 1px solid rgba(170, 170, 170, 0.80);
