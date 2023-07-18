@@ -1,0 +1,58 @@
+.things {
+  &__header {
+    margin: 0 0 59px 0;
+  }
+
+  &__container {
+    max-width: 1280px;
+    padding: 55px 0 149px 0;
+    @media(max-width: 1279px){
+      padding: 55px 5px 149px 5px;
+    }
+    @media(max-width: 768px){
+      padding: 20px 10px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+  }
+
+  &__column {
+    flex: 0 1 50%;
+    padding: 20px;
+    @media(max-width: 768px){
+      flex: 0 1 100%;
+    }
+  }
+
+  &__item {
+    height: 637px;
+    position: relative;
+    border-radius: 20px;
+  }
+
+  &__title {
+    position:absolute;
+    bottom: 60px;
+    left: 46px;
+    color: #FFF;
+    z-index: 2;
+
+    font-size: 42px;
+    font-weight: 600;
+    letter-spacing: -1.05px;
+  }
+
+  &__bg {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    img{
+      border-radius: 20px;
+    }
+  }
+}
+
