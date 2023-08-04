@@ -1,6 +1,9 @@
 .footer {
   padding: 107px 0 284px 0;
   color: #000;
+  @media(max-width: $maxWidth){
+    padding: 107px 5px 284px 5px;
+  }
   @media (max-width: 768px) {
     padding: 70px 0;
   }
