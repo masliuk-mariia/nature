@@ -612,6 +612,12 @@ body._lock {
   overflow: hidden;
   background-color: red;
   border-radius: 20px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+}
+.discover__item:hover {
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease 0s;
 }
 @media (max-width: 768px) {
   .discover__item {
