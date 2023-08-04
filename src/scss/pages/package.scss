@@ -20,7 +20,10 @@
   }
 
   &__header {
-    margin-bottom: 49px;
+    margin: 0 0 49px 0;
+    @media(max-width: 768px){
+      margin: 0 0 20px 0;
+    }
   }
 
   &__row {
@@ -139,16 +142,18 @@
     }
     &:hover{
       background-color: darken($mainColor, 10%);
-      box-shadow: 1px 1px 5px rgba(0, 0, 0, .3);
+      box-shadow: 1px 1px 10px rgba(0, 0, 0, .5);
+      transition: all 0.3s ease 0s;
     }
 
     &_white {
       color: #3685FB;
       background-color: #fff;
       &:hover{
-        background-color: #fff;
-        color: $mainColor;
-        box-shadow: 1px 1px 5px rgba(0, 0, 0, .3);
+        background-color: $mainColor;
+        color: #fff;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, .5);
+        transition: all 0.3s ease 0s;
       }
     }
   }
