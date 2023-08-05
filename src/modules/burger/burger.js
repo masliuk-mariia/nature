@@ -29,12 +29,10 @@ class MakeBurger{
   constructor(){
     this.iconMenu = document.querySelector(".menu__icon");
     this.menuBody = document.querySelector(".menu__body");
-    console.log(this.iconMenu);
   }
   activeMenu(){
     
     if (this.iconMenu){
-      console.log('active');
       this.iconMenu.addEventListener("click", (e)=>{
         console.log('click');
         this.menuBody.classList.toggle("_active");
