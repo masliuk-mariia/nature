@@ -12,38 +12,32 @@ export const images = () => {
     .pipe(app.plugins.newer(app.path.build.images))
     //make webp
     .pipe(
-      app.plugins.if(
-        app.isBuild,
-        webp()
-      )
+              webp()
+
     )
     .pipe(
-      app.plugins.if(
-        app.isBuild,
+     
         app.gulp.dest(app.path.build.images)
-      ))
+      )
 
     // minimize images
     .pipe(
-      app.plugins.if(
-        app.isBuild,
+      
         app.gulp.src(app.path.src.images)
-        ))
+        )
     .pipe(
-      app.plugins.if(
-        app.isBuild,
+
         app.plugins.newer(app.path.build.images)
-    ))
+    )
     .pipe(
-      app.plugins.if(
-        app.isBuild,
+      
         imagemin({
         progressive: true,
         svgoPlugins: [{removeViewBox: false}],
         interlaced: true,
         optimizationLevel: 3 // from 0 to 7
       })
-      ))
+      )
     .pipe(app.gulp.dest(app.path.build.images))
     //copy svg
     .pipe(app.gulp.src(app.path.src.svg))

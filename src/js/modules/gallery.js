@@ -21,6 +21,11 @@ export function main(){
   makeActiveItem();
   const blogContent = document.querySelector(".blog__container");
   const photos = blogContent.querySelectorAll(".gallery__item");
+  const avatarDiv = document.querySelector(".blog__author");
+  const avatarLogo = avatarDiv.querySelector("img");
+  const avatarLogoPic = avatarDiv.querySelector('[type]');
+  let avatar_webp = '';
+
   if (photos==undefined) return;
   photos.forEach(cur=>{
     cur.addEventListener("click", (e)=>{
@@ -28,9 +33,15 @@ export function main(){
       clearActiveClass();
       node.classList.add("gallery__item_active");
  
-      const author_avatar = node.dataset.author;
-      const author = blogContent.querySelector(".blog__author_avatar");
-      if (author) author.src = author_avatar;
+      const author_avatar_link = node.dataset.author;
+      console.log(author_avatar_link);
+      if (avatarLogo) avatarLogo.src = author_avatar_link;
+      if (avatarLogoPic) {
+        avatar_webp = author_avatar_link.replace("jpg", "webp");
+        avatar_webp = author_avatar_link.replace("png", "webp");
+        avatarLogoPic.src=avatar_webp;
+      }
+      
       const author_text = node.dataset.text;
       const text_blog = blogContent.querySelector(".blog__text");
       if (text_blog) text_blog.textContent = author_text;
