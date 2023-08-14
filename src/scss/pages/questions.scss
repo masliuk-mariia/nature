@@ -48,6 +48,10 @@
     @media(max-width: 768px){
       padding: 10px 20px 60px 20px;
     }
+    @media(max-width: 425px){
+      padding: 10px 20px;
+      align-items: center;
+    }
   }
 
   &__title {

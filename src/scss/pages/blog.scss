@@ -4,11 +4,12 @@
   margin-bottom: 149px;
   @media(max-width: 768px){
     padding: 70px 5px;
+    margin-bottom: 70px;
   }
   &__container {
     padding: 110px 100px 50px 100px;
     @media(max-width: 768px){
-      padding: 70px 5px;
+      padding: 50px 5px;
     }
     background-color: #fff;
     position: relative;
@@ -17,6 +18,7 @@
     display: flex;
     @media(max-width: 960px){
       flex-direction: column;
+      min-height: auto;
     }
   }
 
@@ -31,8 +33,16 @@
   	font-weight: 600;
     letter-spacing: -1.2px;
     margin-bottom: 37px;
-    @media(max-width: 420px){
+    @media(max-width: 768px){
       font-size: 38px;
+      margin-bottom: 20px;
+    }
+    @media(max-width: 425px){
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+    @media(max-width: 320px){
+      font-size: 20px;
     }
   }
 
@@ -42,8 +52,11 @@
     font-weight: 500;
     letter-spacing: -0.5px;
     margin-bottom: 20px;
-    @media(max-width: 420px){
+    @media(max-width: 425px){
       font-size: 16px;
+    }
+    @media(max-width: 320px){
+      font-size: 14px;
     }
   }
 
@@ -60,13 +73,14 @@
     align-items: center;
     @media(max-width: 450px){
       flex-direction: column;
+      padding: 10px;
     }
   }
 
   &__author {
     margin: 0 40px 0 0;
     @media(max-width: 450px){
-      margin: 0 0 40px 0;
+      margin: 0 0 10px 0;
     }
     img{
       border-radius: 50%;
@@ -87,6 +101,9 @@
     }
     &:after{
       content: ' “';
+    }
+    @media(max-width: 425px){
+      font-size: 16px;
     }
 
   }
@@ -109,19 +126,20 @@
   align-items: center;
   &__row {
     display: flex;
-    @media(max-width: 960px){
-      justify-content: center;
-      align-items: center;
-    
-    }
-
-    flex-wrap: wrap;
     margin: 0 -9px;
+    @media(max-width: 960px){
+      justify-content: flex-start;
+      align-items: center;
+      overflow: auto;
+    }
   }
 
   &__column {
     padding: 0 9px;
-    
+    flex: 0 0 250px;
+    @media(max-width: 960px){
+      flex: 0 0 205px;
+    }    
     &_1 {
       margin-top: 492px;
       @media(max-width: 960px){
@@ -152,14 +170,13 @@
   }
 
   &__item {
-    border-radius: 10px;
-    border: 6px solid #fff;
     img{
       width: 298px;
       height: 449px;
       border-radius: 10px;
-      border: 1px solid #000;
+      // border: 4px solid #fff;
       box-shadow: 0px 20px 60px 0px rgba(0, 0, 0, 0.12);
+      transition: all 0.3s ease 0s;
       @media(max-width: 1300px){
         width: 250px;
         height: 383px;
@@ -168,20 +185,18 @@
         width: 205px;
         height: 314px;
       }
-      @media(max-width: 960px){
-        width: 146px;
-        height: 224px;
-      }
-      @media(max-width: 375px){
-        width: 117px;
-        height: 180px;
-      }
     }
     &_active{
-      border: 6px solid #3685FB;
+      img{
+        border: 4px solid #3685FB;
+      }
+      
     }
     &:hover{
-      border: 6px solid #3685FB;
+      img{
+        border: 4px solid #3685FB;
+      }
+      
     }
   }
 }
