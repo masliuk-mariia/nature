@@ -34,7 +34,6 @@ export function main(){
       node.classList.add("gallery__item_active");
  
       const author_avatar_link = node.dataset.author;
-      console.log(author_avatar_link);
       if (avatarLogo) avatarLogo.src = author_avatar_link;
       if (avatarLogoPic) {
         avatar_webp = author_avatar_link.replace("jpg", "webp");
